@@ -27,7 +27,7 @@ return [
 					[
 						'homepage' => [
 							'post_title'     => 'Homepage',
-							'post_content'   => require dirname( __FILE__ ) . '/import/content/home-black-white.php',
+							'post_content'   => require dirname( __FILE__ ) . '/import/content/home-erc.php',
 							'post_type'      => 'page',
 							'post_status'    => 'publish',
 							'comment_status' => 'closed',

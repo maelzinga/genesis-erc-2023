@@ -1,8 +1,8 @@
 /*
-Theme Name: Genesis Sample
+Theme Name: Genesis ERC 2023
 Theme URI: https://demo.studiopress.com/
 Description: This is the sample theme created for the Genesis Framework.
-Author: StudioPress
+Author: MEL
 Author URI: https://www.studiopress.com/
 
 Version: 3.4.2
@@ -60,6 +60,7 @@ Requires PHP: 5.6
 	- Pagination
 	- Entry Comments
 - Sidebar
+- Block Widgets
 - Footer Widgets
 - Site Footer
 - Media Queries
@@ -145,7 +146,38 @@ html {
 
 /* Defaults
 ---------------------------------------------------------------------------- */
-
+/* extra blocks */
+@container (max-width: 720px) {
+	.sub-blocks-all  {
+		width: 380px;
+	}
+}
+@container (max-width: 1000px) {
+	.sub-blocks-all  {
+		width: 760px;
+	}
+}
+.sub-blocks-all {
+	max-width: 1200px;
+	min-width:1000px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:-100px;
+}
+#sub-block-1{
+	background: #0ff !important;
+}
+.sub-block-widgets{ 
+	width: 300px;
+	height:300px;
+	overflow: hidden;
+	background: #fff !important;
+	padding: 10px;
+	margin:10px;
+	border-color:#750000;
+	border-style: solid;
+	float: left;
+}
 /* Typographical Elements
 --------------------------------------------- */
 
@@ -184,7 +216,7 @@ a {
 
 a:focus,
 a:hover {
-	color: #333;
+	color: #0073e5;
 	text-decoration: none;
 }
 
@@ -208,7 +240,7 @@ hr {
 	border-collapse: collapse;
 	border-bottom: 1px solid currentColor;
 	clear: both;
-	color: #eee;
+	color: #fff;
 	margin: 1.65em auto;
 }
 
@@ -226,7 +258,7 @@ i {
 
 mark {
 	background: #ddd;
-	color: #333;
+	color: #0073e5;
 }
 
 blockquote {
@@ -886,7 +918,7 @@ figcaption,
 .gs-faq__question {
 	background: transparent;
 	border-bottom: 1px solid #eee;
-	color: #333;
+	color: #fff;
 	padding-left: 0;
 	padding-right: 0;
 }
@@ -894,7 +926,7 @@ figcaption,
 .gs-faq__question:focus,
 .gs-faq__question:hover {
 	background: transparent;
-	color: #0073e5;
+	color: #fff;
 }
 
 .gs-faq__question::after {
@@ -978,7 +1010,7 @@ figcaption,
 
 /* Display outline on focus */
 :focus {
-	color: #333;
+	color: #fff;
 	outline: #ccc solid 1px;
 }
 
@@ -987,7 +1019,8 @@ figcaption,
 ---------------------------------------------------------------------------- */
 
 .site-header {
-	background-color: #fff;
+	background-color: #750000;
+	color:#fff;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 	padding: 0 30px;
 }
@@ -1026,7 +1059,7 @@ figcaption,
 .site-title a,
 .site-title a:focus,
 .site-title a:hover {
-	color: #333;
+	color: #fff;
 	text-decoration: none;
 }
 
@@ -1058,7 +1091,7 @@ figcaption,
 }
 
 .genesis-nav-menu a {
-	color: #333;
+	color: #fff;
 	display: block;
 	font-size: 15px;
 	font-weight: 400;
@@ -1073,7 +1106,7 @@ figcaption,
 .genesis-nav-menu .current-menu-item > a,
 .genesis-nav-menu .sub-menu .current-menu-item > a:focus,
 .genesis-nav-menu .sub-menu .current-menu-item > a:hover {
-	color: #0073e5;
+	color: #fff;
 	text-decoration: none;
 }
 
@@ -1417,7 +1450,7 @@ p.entry-meta {
 	border-top: 1px solid #eee;
 	background-color: #fff;
 	clear: both;
-	padding: 60px 0;
+	padding: 10px 0;
 }
 
 .footer-widgets .wrap {
@@ -1693,13 +1726,12 @@ p.entry-meta {
 	--------------------------------------------- */
 
 	.footer-widgets .wrap {
-		max-width: 1140px;
+		width: calc(100% / 1);
 	}
 
 	.footer-widget-area {
-		float: left;
 		margin-bottom: 0;
-		width: calc(100% / 3);
+		width: calc(100% / 1);
 	}
 
 }
@@ -1845,4 +1877,8 @@ p.entry-meta {
 		page-break-before: avoid;
 	}
 
+}
+
+.ecs-event-list {
+	font-size:10px;
 }

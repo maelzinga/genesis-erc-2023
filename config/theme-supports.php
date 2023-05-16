@@ -34,7 +34,8 @@ return [
 		'skip-links',
 	],
 	'genesis-after-entry-widget-area' => '',
-	'genesis-footer-widgets'          => 3,
+	'sub-block-widgets'       		  => 6,
+	'genesis-footer-widgets'          => 2,
 	'genesis-menus'                   => [
 		'primary'   => __( 'Header Menu', 'genesis-sample' ),
 		'secondary' => __( 'Footer Menu', 'genesis-sample' ),

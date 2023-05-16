@@ -56,3 +56,43 @@ function genesis_sample_color_brightness( $color, $change ) {
 	return '#' . dechex( $red ) . dechex( $green ) . dechex( $blue );
 
 }
+
+
+/**
+ * Get the default image for the front-page-1 section.
+ *
+ * @return string front-page-1 image for the front-page hero
+ *
+ * @since 1.0.0
+ */
+function erc_pro_get_default_front_page_image_1() {
+
+	return get_stylesheet_directory_uri() . '/images/default.jpg';
+
+}
+
+/**
+ * Get the default image for the front-page-2 section.
+ *
+ * @return string front-page-2 image for the front-page-2 section
+ *
+ * @since 1.0.0
+ */
+function erc_pro_get_default_front_page_image_2() {
+
+	return get_stylesheet_directory_uri() . '/images/front_page_2.jpg';
+
+}
+
+/**
+ * Get the default image for the front-page-3 section.
+ *
+ * @return string front-page-3 image for the front-page-3 section
+ *
+ * @since 1.0.0
+ */
+function erc_pro_get_default_front_page_image_3() {
+
+	return get_stylesheet_directory_uri() . '/images/front_page_3.jpg';
+
+}

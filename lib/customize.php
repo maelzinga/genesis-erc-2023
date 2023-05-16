@@ -22,6 +22,82 @@ function genesis_sample_customizer_register( $wp_customize ) {
 
 	$appearance = genesis_get_config( 'appearance' );
 
+	// ERC 2023
+	$wp_customize->add_panel(
+		'erc_pro_settings', array(
+			'description' => __( 'Customize the ERC Pro Theme.', 'breakthrough-pro' ),
+			'priority'    => 80,
+			'title'       => __( 'ERC Pro Settings', 'breakthrough-pro' ),
+		)
+	);
+
+
+	// Image Settings section.
+	$wp_customize->add_section(
+		'erc_pro_image_settings', array(
+			'description' => sprintf( '<strong>%s</strong>', __( 'Modify the images displayed on the front page, the default image shown on inside pages, and the footer image. The recommended image size is 1600px wide by 420px tall. Larger images will be cropped to that size.', 'breakthrough-pro' ) ),
+			'title'       => __( 'Image Settings', 'breakthrough-pro' ),
+			'panel'       => 'erc_pro_settings',
+		)
+	);
+
+	// Front Page Image 1.
+	$wp_customize->add_setting(
+		'erc_pro_front_page_image_1', array(
+			'default'           => erc_pro_get_default_front_page_image_1(),
+			'sanitize_callback' => 'esc_attr',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize, 'erc_pro_front_page_image_1', array(
+				'description' => __( 'Select an image for the hero section of the front page.', 'breakthrough-pro' ),
+				'label'       => __( 'Front Page Image 1', 'breakthrough-pro' ),
+				'section'     => 'erc_pro_image_settings',
+				'settings'    => 'erc_pro_front_page_image_1',
+			)
+		)
+	);
+
+	// Front Page Image 2.
+	$wp_customize->add_setting(
+		'erc_pro_front_page_image_2', array(
+			'default'           => erc_pro_get_default_front_page_image_2(),
+			'sanitize_callback' => 'esc_attr',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize, 'erc_pro_front_page_image_2', array(
+				'description' => __( 'Select an image to appear if the Front Page 1, Front Page 2 or Front Page 3 sections are in use.', 'breakthrough-pro' ),
+				'label'       => __( 'Front Page Image 2', 'breakthrough-pro' ),
+				'section'     => 'erc_pro_image_settings',
+				'settings'    => 'erc_pro_front_page_image_2',
+			)
+		)
+	);
+
+	// Front Page Image 3.
+	$wp_customize->add_setting(
+		'erc_pro_front_page_image_3', array(
+			'default'           => erc_pro_get_default_front_page_image_3(),
+			'sanitize_callback' => 'esc_attr',
+		)
+	);
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+			$wp_customize, 'erc_pro_front_page_image_3', array(
+				'description' => __( 'Select an image to appear if the Front Page 4 or Front Page 5 sections are in use.', 'breakthrough-pro' ),
+				'label'       => __( 'Front Page Image 3', 'breakthrough-pro' ),
+				'section'     => 'erc_pro_image_settings',
+				'settings'    => 'erc_pro_front_page_image_3',
+			)
+		)
+	);
+
 	$wp_customize->add_setting(
 		'genesis_sample_link_color',
 		[

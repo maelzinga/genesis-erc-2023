@@ -93,11 +93,77 @@ return [
 		],
 	],
 	'widgets'          => [
+		'sub-block-1' => [
+			[
+				'type' => 'text',
+				'args' => [
+					'title'  => 'Sub Block 1',
+					'text'   => '<p>With an emphasis on typography, white space, and mobile-optimized design, your website will look absolutely breathtaking.</p><p><a href="#">Learn more about design</a>.</p>',
+					'filter' => 1,
+					'visual' => 1,
+				],
+			],
+		],
+		'sub-block-2' => [
+			[
+				'type' => 'text',
+				'args' => [
+					'title'  => 'Sub Block 2',
+					'text'   => '<p>With an emphasis on typography, white space, and mobile-optimized design, your website will look absolutely breathtaking.</p><p><a href="#">Learn more about design</a>.</p>',
+					'filter' => 1,
+					'visual' => 1,
+				],
+			],
+		],
+		'sub-block-3' => [
+			[
+				'type' => 'text',
+				'args' => [
+					'title'  => 'Sub Block 3',
+					'text'   => '<p>With an emphasis on typography, white space, and mobile-optimized design, your website will look absolutely breathtaking.</p><p><a href="#">Learn more about design</a>.</p>',
+					'filter' => 1,
+					'visual' => 1,
+				],
+			],
+		],
+		'sub-block-4' => [
+			[
+				'type' => 'text',
+				'args' => [
+					'title'  => 'Sub Block 4',
+					'text'   => '<p>With an emphasis on typography, white space, and mobile-optimized design, your website will look absolutely breathtaking.</p><p><a href="#">Learn more about design</a>.</p>',
+					'filter' => 1,
+					'visual' => 1,
+				],
+			],
+		],
+		'sub-block-5' => [
+			[
+				'type' => 'text',
+				'args' => [
+					'title'  => 'Sub Block 5',
+					'text'   => '<p>With an emphasis on typography, white space, and mobile-optimized design, your website will look absolutely breathtaking.</p><p><a href="#">Learn more about design</a>.</p>',
+					'filter' => 1,
+					'visual' => 1,
+				],
+			],
+		],
+		'sub-block-6' => [
+			[
+				'type' => 'text',
+				'args' => [
+					'title'  => 'Sub Block 6',
+					'text'   => '<p>With an emphasis on typography, white space, and mobile-optimized design, your website will look absolutely breathtaking.</p><p><a href="#">Learn more about design</a>.</p>',
+					'filter' => 1,
+					'visual' => 1,
+				],
+			],
+		],
 		'footer-1' => [
 			[
 				'type' => 'text',
 				'args' => [
-					'title'  => 'Design',
+					'title'  => 'Footer 1',
 					'text'   => '<p>With an emphasis on typography, white space, and mobile-optimized design, your website will look absolutely breathtaking.</p><p><a href="#">Learn more about design</a>.</p>',
 					'filter' => 1,
 					'visual' => 1,
@@ -108,19 +174,8 @@ return [
 			[
 				'type' => 'text',
 				'args' => [
-					'title'  => 'Content',
-					'text'   => '<p>Our team will teach you the art of writing audience-focused content that will help you achieve the success you truly deserve.</p><p><a href="#">Learn more about content</a>.</p>',
-					'filter' => 1,
-					'visual' => 1,
-				],
-			],
-		],
-		'footer-3' => [
-			[
-				'type' => 'text',
-				'args' => [
-					'title'  => 'Strategy',
-					'text'   => '<p>We help creative entrepreneurs build their digital business by focusing on three key elements of a successful online platform.</p><p><a href="#">Learn more about strategy</a>.</p>',
+					'title'  => 'Footer 2',
+					'text'   => '<p>With an emphasis on typography, white space, and mobile-optimized design, your website will look absolutely breathtaking.</p><p><a href="#">Learn more about design</a>.</p>',
 					'filter' => 1,
 					'visual' => 1,
 				],

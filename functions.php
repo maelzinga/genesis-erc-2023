@@ -264,3 +264,74 @@ function genesis_sample_comments_gravatar( $args ) {
 	return $args;
 
 }
+
+// Step-1: Create Extra Widget Area
+genesis_register_widget_area( array(
+	'id' => 'sub-block-widgets-1',
+	'name' => __( 'Sub Block Widget 1', 'child theme' ),
+	'description' => __( 'Sub Block 1', 'child theme' ),
+), );
+genesis_register_widget_area( array(
+	'id' => 'sub-block-widgets-2',
+	'name' => __( 'Sub Block Widget 2', 'child theme' ),
+	'description' => __( 'Sub Block 2', 'child theme' ),
+) );
+genesis_register_widget_area( array(
+	'id' => 'sub-block-widgets-3',
+	'name' => __( 'Sub Block Widget 3', 'child theme' ),
+	'description' => __( 'Sub Block 3', 'child theme' ),
+) );
+genesis_register_widget_area( array(
+	'id' => 'sub-block-widgets-4',
+	'name' => __( 'Sub Block Widget 4', 'child theme' ),
+	'description' => __( 'Sub Block 4', 'child theme' ),
+) );
+genesis_register_widget_area( array(
+	'id' => 'sub-block-widgets-5',
+	'name' => __( 'Sub Block Widget 5', 'child theme' ),
+	'description' => __( 'Sub Block 5', 'child theme' ),
+) );
+genesis_register_widget_area( array(
+	'id' => 'sub-block-widgets-6',
+	'name' => __( 'Sub Block Widget 6', 'child theme' ),
+	'description' => __( 'Sub Block 6', 'child theme' ),
+) );
+
+// Step-2: Position Widget Header - Place widget before Widget area
+add_action ('genesis_after_content_sidebar_wrap','sub_block_widgets_area', 9);
+function sub_block_widgets_area ()  {
+	if (is_front_page()) {
+		$block_widgets = get_theme_support( 'sub-block-widgets' );
+		
+		if ( ! $block_widgets || ! isset( $block_widgets[0] ) || ! is_numeric( $block_widgets[0] ) ) {
+			return;
+		}
+		
+		$block_widgets = (int) $block_widgets[0];
+		if ($block_widgets > 6)
+		{
+			$block_widgets = 6;
+		}
+		$counter = 1;
+
+		while ( $counter <= $block_widgets ) {
+			$var_before = '';
+			$var_after = '';
+			if ($counter == 1)
+			{
+				$var_before = '<div class="sub-blocks-all">';
+			}
+			if ($counter == $block_widgets)
+			{
+				$var_after = '</div>';
+			}
+			genesis_widget_area( sprintf( 'sub-block-widgets-%d', $counter ), 
+			array(
+				'before' => sprintf( '%s<div class="sub-block-widgets" id="sub-block-%d">',$var_before,  $counter ),
+				'after'  => sprintf( '</div>%s', $var_after),
+				)  );
+
+			$counter++;
+		}
+	}
+ }
